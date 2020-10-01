@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  padding: 1.5em;
+
+}
+
+.logo{
+  height: 6em;
+
+}
+
+ul{
+  margin: auto 0;
+  list-style: none;
+  display: flex;
+}
+
+li{
+  margin-left: 2em;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+}
+
+.intro{
+  height:100vh;
+  margin-top: -8em;
+  position: relative;
+  z-index: -1;
+}
+
+.intro video{
+  height:100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.intro h1{
+  position: absolute;
+  top:50%;
+  left:50%;
+  color:white;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  text-align: center;
+font-family: 'Montserrat', sans-serif;
+}
+
+#second-page{
+  text-align: center;
+  height:100vh;
+  width:100vw;
+  position: relative;
+
+}
+
+#second-page h1{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 4.5em;
+  padding: 3em 3.5em 0em 3.5em;
+font-family: 'Montserrat', sans-serif;
+}
+
+.second-h1{
+  opacity: 0;
+  margin: 0;
+}
+
+/* Icon */
+/* // Example 1 */
+@keyframes scroll_1 {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-0.6em); }
+  50%  { transform: translateY(0); }
+  75%  { transform: translateY(0.6em); }
+  100% { transform: translateY(0); }
+}
+/* // General icon style */
+.scroll-icon {
+  display: block;
+  position: relative;
+  height: 3em;
+  width: 1.5em;
+  border: .25em solid black;
+  border-radius: 1em;
+}
+
+.scroll-icon__wheel-outer {
+  display: block;
+  position: absolute;
+
+  left: 50%;
+  top: .6em;
+  height: 1em;
+  width: .4em;
+  margin-left: -.2em;
+  border-radius: .4em;
+  overflow: hidden;
+}
+
+.scroll-icon__wheel-inner {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background: black;
+  animation: scroll_1 2.75s ease-in-out infinite;
+}
+
+.example {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding:0;
+
+
+}
+
+h2{
+  font-family: sans-serif;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
